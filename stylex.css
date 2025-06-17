@@ -1,0 +1,39 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    padding: 30px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  table.table {
+    width: 600px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  thead.thead-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  thead.thead-primary th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
