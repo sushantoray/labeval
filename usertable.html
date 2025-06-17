@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Table</title>
+    <link rel="stylesheet" href="styles/table.css">
+</head>
+<body>
+    <h2>User Table</h2>
+    <table id="usertable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Obydul</td>
+                <td>obydul123@gmail.com</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td>Gourab</td>
+                <td>gourab234@gmail.com</td>
+                <td>234</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+     
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        const email = params.get("email");
+        const id = params.get("id");
+
+        if (name && email && id) {
+            const table = document.getElementById("usertable").getElementsByTagName("tbody")[0];
+            const newRow = table.insertRow();
+
+            const nameCell = newRow.insertCell(0);
+            const emailCell = newRow.insertCell(1);
+            const idCell = newRow.insertCell(2);
+
+            nameCell.textContent = name;
+            emailCell.textContent = email;
+            idCell.textContent = id;
+        }
+    </script>
+</body>
+</html>
